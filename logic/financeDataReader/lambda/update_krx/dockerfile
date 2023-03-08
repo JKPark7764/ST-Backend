@@ -1,0 +1,9 @@
+# Need to build at logic folder
+FROM public.ecr.aws/lambda/python:3.9
+COPY ./financeDataReader/lambda/update_krx/requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
+COPY ./financeDataReader/lambda/update_krx/update_krx.py ${LAMBDA_TASK_ROOT}
+COPY ./db/oci_sql.py ${LAMBDA_TASK_ROOT}
+COPY ./common/vault.py ${LAMBDA_TASK_ROOT}
+
+CMD ["update_krx.handler"]

@@ -1,0 +1,7 @@
+# Need to build at logic folder
+FROM public.ecr.aws/lambda/python:3.9
+COPY ./financeDataReader/lambda/get_live_price/requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
+COPY ./financeDataReader/lambda/get_live_price/get_live_price.py ${LAMBDA_TASK_ROOT}
+
+CMD ["get_live_price.handler"]

@@ -1,0 +1,4 @@
+oracledb
+pandas
+finance-datareader
+beautifulsoup4
