@@ -52,7 +52,7 @@ def handler(event, context):
 
     elif mode == 'update':
         item = event_body['item']
-        item = [{x['name'], x['market'], x['symbol']} for x in item]
+        item = [{'name' : x['name'], 'market' : x['market'], 'symbol' : x['symbol']} for x in item]
 
         print(item)
         put_item("watch_list_table", {
