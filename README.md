@@ -7,10 +7,10 @@
 
 </aside>
 
-### Front
+### Front(https://github.com/JKPark7764/ST-Front)
 - Vue, Vuex를 이용한 SPA 웹사이트 구축
 
-### Backend
+### Backend(https://github.com/JKPark7764/ST-Backend)
 - API Gateway
     - HTTP - 인증, DB User Table 전송
     - WebSocket - 검색결과, 주식 실시간 데이터 전송
@@ -19,11 +19,11 @@
     - ElasticSearch 업데이트
 - Auth0 - 회원가입, JWT 발급, 인증
 
-### DB
+### DB(Private Repo)
 - OCI Autonomous DB - 유저 정보 저장
 - AWS Dynamo DB - 유저별 관심종목 리스트 저장
 
-### Devops
+### Devops(Private Repo)
 - Terraform - AWS, OCI 구성 자동화
 - Ansible - 오픈소스 구성 자동화
     - Nginx - Web, IP Restriction
